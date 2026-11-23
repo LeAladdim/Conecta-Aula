@@ -1,0 +1,257 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #101c32;
+    background-color: #f5f8fc;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.container {
+    width: 83%;
+    max-width: 1110px;
+    margin: auto;
+}
+
+.cabecalho {
+    background-color: white;
+}
+
+.cabecalho-conteudo {
+    min-height: 67px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.marca {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #102f70;
+    font-size: 17px;
+}
+
+.marca img {
+    width: 36px;
+    height: 36px;
+    object-fit: contain;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    gap: 36px;
+    color: #536078;
+    font-size: 14px;
+}
+
+.botao-compartilhar {
+    padding: 10px 14px;
+    color: white;
+    background-color: #102f70;
+    border-radius: 12px;
+}
+
+.banner {
+    min-height: 392px;
+    display: flex;
+    align-items: center;
+    color: white;
+    background: linear-gradient(110deg, #09285f, #075a99, #078ac4);
+}
+
+.subtitulo {
+    margin-bottom: 17px;
+    color: #d1dced;
+    font-size: 15px;
+    letter-spacing: 1px;
+}
+
+.banner h1 {
+    margin: 0;
+    font-size: 46px;
+    line-height: 1.3;
+}
+
+.acoes-banner {
+    display: flex;
+    gap: 12px;
+    margin-top: 32px;
+}
+
+.pesquisa {
+    width: 427px;
+}
+
+.pesquisa input {
+    width: 100%;
+    height: 48px;
+    padding: 0 18px;
+    border: none;
+    border-radius: 17px;
+    font-size: 14px;
+}
+
+.botao-banner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 29px;
+    color: #102f70;
+    background-color: #e2f1ff;
+    border-radius: 12px;
+    font-size: 14px;
+}
+
+
+.disciplinas {
+    padding: 50px 0 70px;
+}
+
+.titulo-secao {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    margin-bottom: 33px;
+}
+
+.titulo-secao h2 {
+    margin: 0 0 7px;
+    color: #102f70;
+    font-size: 22px;
+}
+
+.titulo-secao p {
+    margin: 0;
+    color: #64748b;
+    font-size: 15px;
+}
+
+.titulo-secao > a {
+    color: #078bd0;
+    font-size: 14px;
+}
+
+.lista-disciplinas {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.card-disciplina {
+    min-height: 238px;
+    display: flex;
+    flex-direction: column;
+    padding: 24px;
+    background-color: white;
+    border: 1px solid #d8e2ee;
+    border-radius: 22px;
+}
+
+/* Espaço vazio para adicionar um ícone futuramente */
+.icone-disciplina {
+    width: 44px;
+    height: 44px;
+    margin-bottom: 19px;
+    border-radius: 16px;
+    background-color: #e1f1ff;
+}
+
+.card-disciplina h3 {
+    margin: 0 0 11px;
+    color: #101827;
+    font-size: 16px;
+}
+
+.card-disciplina p {
+    margin: 0 0 18px;
+    color: #64748b;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.rodape-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    margin-top: auto;
+    color: #64748b;
+    font-size: 12px;
+}
+
+.rodape-card a {
+    padding: 10px 13px;
+    color: white;
+    background-color: #102f70;
+    border-radius: 12px;
+}
+
+
+@media (max-width: 800px) {
+    .container {
+        width: 90%;
+    }
+
+    .banner h1 {
+        font-size: 36px;
+    }
+
+    .lista-disciplinas {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 560px) {
+    .cabecalho-conteudo,
+    .menu,
+    .acoes-banner,
+    .titulo-secao {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .cabecalho-conteudo {
+        padding: 15px 0;
+        gap: 15px;
+    }
+
+    .menu {
+        width: 100%;
+        gap: 15px;
+    }
+
+    .banner {
+        padding: 45px 0;
+    }
+
+    .banner h1 {
+        font-size: 30px;
+    }
+
+    .banner h1 br {
+        display: none;
+    }
+
+    .acoes-banner,
+    .pesquisa,
+    .botao-banner {
+        width: 100%;
+    }
+
+    .botao-banner {
+        min-height: 48px;
+    }
+
+    .lista-disciplinas {
+        grid-template-columns: 1fr;
+    }
+}
